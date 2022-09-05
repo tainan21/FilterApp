@@ -1,7 +1,7 @@
 <template>
-    <Landing v-if="$route.path === '/landing'" @change-theme="changeTheme" />
+    <FacaSeuPedido v-if="$route.path === '/faça-seu-pedido'" @change-theme="changeTheme" />
     <Login v-else-if="$route.path === '/login'" />
-    <FacaSeuPedido v-else-if="$route.path === '/faça-seu-pedido'"  />
+    <Landing v-else-if="$route.path === '/landing'"  />
     <DesignCoffe v-else-if="$route.path === '/designCoffe'"  />
     <CarBurguer v-else-if="$route.path === '/carrinho'"  />
     <Product v-else-if="$route.path === '/product'"  />

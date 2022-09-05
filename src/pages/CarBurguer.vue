@@ -103,7 +103,7 @@
   -->
     		<div class="grid grid-nogutter card">
                 <h5 class="text-center col-12">Informações</h5>
-                <div class="col-12 lg:col-7 md:col-7 sm:col-12 p-1">
+                <div class="col-12 lg:col-12 md:col-12 sm:col-12 p-1">
                     <div class="p-fluid grid">
                         <div class="field col-12 md:col-12 margin_border">
                             <span class="p-float-label p-input-icon-left">
@@ -147,7 +147,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 lg:col-5 md:col-5 sm:col-12 p-3">
+                <div class="col-12 lg:col-12 md:col-12 sm:col-12 p-3">
                     <div class="grid">
                         <div class="text-center col-12">Forma de Pagamento</div>
                         <div class="col-12 lg:col-12 md:col-12 sm:col-12 flex justify-content-around p-1">
@@ -162,10 +162,6 @@
                                     <InputText  class="input_formT" v-model="troco" id="troco" type="text"/>    
                                 </span>
                             </div>
-                        </div>
-                        <div class="text-center col-12">                          
-                            <h5 class="text-center legenda">Deseja colocar sache de catchup Heinz?</h5>
-                            <ToggleButton  v-model="toggleValue" onLabel="Sim" offLabel="Não"  :style="{width: '10em'}"/>                    
                         </div>
                     </div>
                 </div>
@@ -189,7 +185,7 @@ import BottomNavigation from "../components/BottomNavigation.vue";
         data() {
             return {
                 total: null,
-                nomeEmpresa: "Galaxia Burguers",
+                nomeEmpresa: "Filtros Nobre",
                 selected: 1,
                 payMoney: "", 
                 troco: 0,              
@@ -210,7 +206,7 @@ import BottomNavigation from "../components/BottomNavigation.vue";
 				treeSelectNodes: null,
 				selectedNode: null,
                 selectButtonValue1: null,
-                url: 'https://api.whatsapp.com/send?phone=+5514997620451&text=',
+                url: 'https://api.whatsapp.com/send?phone=++5511947673377&text=',
                 toggleValue: null,
                 toggleValue2: null,
                 dropdownItem: null,
@@ -222,28 +218,7 @@ import BottomNavigation from "../components/BottomNavigation.vue";
                 foregroundColor: "#42A5F5",
                 badgeColor: "#FBC02D",
                 dropdownItems: [
-                    {name: ' Nova Pereiras',  code: '', price: 2.00  },
-                    {name: 'Morada do Sol', code: '', price: 2.00 },
-                    {name: 'Residencial Blank', code: '', price: 2.00  },
-                    {name: 'Cruzeiro', code: '', price: 2.00  },
-                    {name: 'Bairro da Serra (Matador)', code: '', price: 2.00  },
-                    {name: 'São Benedito', code: '', price: 2.00  },
-                    {name: 'Centro', code: '', price: 2.00  },
-                    {name: 'Vila Silvia', code: '', price: 2.00  },
-                    {name: 'Parque dos Sonhos(Codepe)', code: '', price: 2.00  },
-                    {name: 'CDHU', code: '', price: 2.00  },
-                    {name: 'Condomínio Arthur Ville', code: '', price: 4.00 },
-                    {name: 'Santo Antônio ', code: '', price: 4.00 },
-                    {name: 'Vila Industrial', code: '', price: 4.00 },
-                    {name: 'Estrada Floriano Peixoto', code: '', price: 5.00 },
-                    {name: 'Bairro Félix', code: '', price: 5.00 },
-                    {name: 'Pedro de Deus', code: '', price: 5.00 },
-                    {name: 'Bela Vista', code: '', price: 6.00 },
-                    {name: 'Estação de Pereiras ', code: '', price: 6.00 },
-                    {name: 'Estrada da Santa (Helú) ', code: '', price: 6.00 },
-                    {name: 'Maristela ', code: '', price: 8.00 },
-                    {name: 'Conchas ', code: '', price: 15.00 },
-                    {name: 'Laranjal Paulista ', code: '', price: 15.00 }                     
+                    {name: ' Meu Bairro ',  code: '', price: "Free"  },                     
                 ],
                 dropdownItemsMoney: [
                     {name: 'Dinheiro',  code: 'Option 1'},
@@ -318,7 +293,6 @@ import BottomNavigation from "../components/BottomNavigation.vue";
                         
                         this.pedido_txt += "\n ----------------------- \n\n"  
                     });
-                    this.pedido_txt += "\n Catchup: \n"
                     this.pedido_txt += "\n" + this.toggleValue2 + "\n"
                     this.pedido_txt += "Observações: " + this.obsText + ",\n"
                     this.pedido_txt += "frete: R$ " + this.bairro.price + "\n"                               
